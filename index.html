@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lock game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body >
+
+    <div class="maincontainer">
+      
+        <div class="pass">
+           <h3 id="score" style="color:black">0</h3>
+<div class="hint-code">9093</div>
+           <h3 class="_pass_code_container">
+             Code  : <span class="passcode">
+
+             </span></h2>
+
+        </div>
+
+<div class="lock-wrapper">
+    <div class="big-circle">
+        <!-- <div class="fruit"></div> -->
+
+    <div class="lock-holder " style="z-index: 20;">
+        <div class="small-lock-holder"></div>
+    </div>
+    <div class="shade">
+    </div>
+      <div class="container-circle" style="z-index: 23;">
+        <div class="fruit"></div>
+        <div class="small-circle rotate">
+            <div class="pill" style="z-index: 22;"></div>
+            <h2 class="_rotate-negative">
+                lock
+            </h2>
+            <h4></h4>
+        </div>
+      </div>
+    </div>
+  
+</div>
+
+<div class="modal-info" id="modal">
+    <div class="hint-box">
+        <div class="alert-box">
+         <!-- <h4 style="color: black;">Tap to start</h4> -->
+            <h5>
+                Tap when the key <br>
+                touches the orange dot
+            </h5>
+            <button id="btn--modal">OK</button>
+        </div>
+
+    </div>
+</div>
+    </div>
+<script src="./audio.js"></script>
+    <script src="app.js"></script>
+    <script src="hidemodal.js"></script>
+</body>
+</html>

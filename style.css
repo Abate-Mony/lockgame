@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --plst:"running"
+}
+:root{
+    --bg-color:lightblue;
+    --angle:20
+}
+body{
+    overflow: hidden;
+    height: 100vh;
+}
+.maincontainer{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+    flex-direction: column;
+    z-index: 1;
+}
+.lock-wrapper{
+    /* border:1px solid orange; */
+    width: 250px;
+    position: relative;
+    z-index: 2;
+    /* background-color:gray; */
+    height:50vh;
+
+}
+.big-circle{
+width: 100%;
+height: 250px;
+background-color: rgb(15, 11, 11);
+border-radius: 50%;
+position: absolute;
+bottom: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 200;
+}
+.small-circle{
+    width: 130px;
+    height: 130px;
+    background-color: var(--bg-color);
+    border-radius: 50%;
+    display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+transform: rotate(-57deg);
+box-shadow: 0px 0px 5px 3px gray, 0px 5px 5px 3px black;
+    }
+ 
+    .lock-holder{
+        top: -65px;
+        height: 100px;
+        width: 110px;
+        position: absolute;
+        /* background-color: black; */
+        background-color: rgb(54, 49, 49);
+        border-radius: 50px 50px 0px 0px;
+        display: flex;
+justify-content: center;
+align-items: center;
+z-index: -20;
+padding-top: 25px;
+border:none;
+/* box-shadow: 0px 0px 5px 3px gray, 0px 5px 5px 3px black; */
+
+    }
+    .small-lock-holder{
+        height: 75px;
+        width: 60px;
+        position: absolute;
+        background-color: var(--bg-color);
+        border-radius: 50px 50px 0px 0px;
+z-index: -20;
+/* box-shadow: 0px 0px 5px 3px var(--bg-color), -10px 5px 5px 3px black; */
+
+
+    }
+    .shade{
+        background-color: var(--bg-color);
+        width: 110px;
+        top: 0px;
+        height: 35px;
+        position: absolute;
+
+    }
+    .alert-box{
+        text-align: center;
+        font-size: 2rem;
+        color: white;
+        padding: 1rem 2rem;
+    }
+    h2,h4{
+        text-align: center;
+        font-size: 3rem;
+        color: white;
+    }
+    h4{
+        font-size: 2rem;
+
+    }
+    .pill{
+        position: absolute;
+        background-color:gold;
+        z-index: 30;
+        width: 15px;
+        height: 45px;
+        top: -50px;
+        border-radius: 6px;
+
+    }
+    .fruit{
+        position: absolute;
+        background-color: gold;
+        z-index: 30;
+        width: 25px;
+        height: 25px;
+        top: -25px;
+        left: calc(50%);
+        border-radius: 50%;
+        z-index: 200;
+    }
+    h5{
+        color: gold;
+    }
+    .container-circle{
+        /* background-color: blue; */
+        position: relative;
+        padding: 1rem;
+        transform: rotate(57deg);
+    }
+    .slide{
+        animation: slide;
+        animation-duration: 3s;
+    }
+    .pass{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* border: 1px solid black; */
+        width: 250px;
+        margin: 0 auto;
+        position: absolute;
+        top: 10px;
+        padding: 0.3rem 2rem;
+        width: 100%;
+        
+    }
+    ._pass_code_container,.hint-code{
+        /* background-color: orange; */
+        padding: 0.4rem 0.4rem;
+        border-radius: 10px;
+        font-size: 1.2rem;
+        font-weight: bolder;
+        color: white;
+    }
+    .passcode span{
+padding: 0.5rem;
+font-size: 1.2rem;
+height: 20px;
+/* color: green; */
+font-weight: bolder;
+    }
+    .modal-info{
+        width: 100%;
+        position: absolute;
+        height: 100vh;
+        background-color: rgb(131, 125, 125);
+        opacity: 1;
+        z-index: 29;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin: 0 auto;
+    }
+.hint-box{
+    border-radius: 10px;
+    background-color: azure;
+width: 90%;
+/* margin: 0 auto; */
+}
+.hint-box button{
+border: none;
+padding: 0.5rem 2rem;
+border-radius: 5px;
+color: blue;
+}
+.hint-box button:hover{
+/* font-size: 1.4rem; */
+background-color: black;
+color: white;
+border: 1px solid gray;
+}
+.shake{
+    animation-name: shake;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+}
+  @keyframes slide{
+    to{
+        top:-120px
+    }
+  }
+  @keyframes shake {
+ 
+    to{
+transform: scale(1.1);
+    }
+  }
+  @media screen and (min-width:576px) {
+    /* .lock-wrapper{
+        position: relative;
+        width:210px;
+        bottom: 0;
+        height: 90vh;
+    }
+    .big-circle{
+        height: 210px;
+    }
+    .modal-info{
+        width: 100%;
+    } */
+    .hint-box{
+        width: fit-content;
+    }
+    .pass{
+        width: 400px;
+    }
+  }
